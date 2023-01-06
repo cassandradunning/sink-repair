@@ -6,7 +6,8 @@ const applicationState = {
 
 const API = "http://localhost:8088"
 
-// FETCH Each array
+// FETCH Each array from API, convert to .json, then add the request obj as a 
+// property to the app state
 export const fetchRequests = () => {
     return fetch(`${API}/requests`)
         .then(response => response.json())
@@ -45,10 +46,10 @@ fetchCompletions()
 
 // GET FUNCTIONS
 export const getRequests = () => {
-    return [applicationState.requests]
+    return [...applicationState.requests]
 }
 export const getPlumbers = () => {
-    return [applicationState.plumbers]
+    return [...applicationState.plumbers]
 }
 export const getCompletions = () => {
     return [...applicationState.completions]

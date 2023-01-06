@@ -7,7 +7,7 @@ import { fetchRequests, fetchCompletions, fetchPlumbers } from "./dataAccess.js"
  */
 
 const mainContainer = document.querySelector("#container")
-
+// invoking completions and plumbers
 const render = () => {
     fetchRequests()
         .then(() => fetchCompletions())
